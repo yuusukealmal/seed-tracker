@@ -8,7 +8,7 @@ function randomHex(length) {
 }
 
 function randomDevice(){
-    devices = [
+    const devices = [
         {
             "User-Agent": "Dalvik/2.1.0 (Linux; U; Android 13; LE2110 Build/TKQ1.230329.002)",
             "model": "LE2110",
