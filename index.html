@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <title>Seed Tracker</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheets/style.css">
+</head>
+<body>
+    <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
+    <div class="controls">
+        <input type="text" maxlength="9" placeholder="Transfer Code" id="account">
+        <br>
+        <input type="text" maxlength="4" placeholder="Confirmation Code" id="password">
+        <br>
+        <form>
+            <fieldset>
+                <legend>Please select Country:</legend>
+                <div>
+                    <input type="radio" name="cc" id="jp" value="jp" />
+                    <label>JP</label>
+                    <input type="radio" name="cc" id="tw" value="tw" />
+                    <label>TW</label>
+                    <input type="radio" name="cc" id="en" value="en" />
+                    <label>EN</label>
+                    <input type="radio" name="cc" id="kr" value="kr" />
+                    <label>KR</label>
+                </div>
+            </fieldset>
+        </form>
+        <br>
+        <select id="gv">
+            <option value="140201">14.2.1</option>
+            <option value="140200">14.2.0</option>
+            <option value="140101">14.1.1</option>
+            <option value="140100">14.1.0</option>
+            <option value="140000">14.0.0</option>
+            <option value="130701">13.7.1</option>
+            <option value="130700">13.7.0</option>
+            <option value="130603">13.6.3</option>
+            <option value="130602">13.6.2</option>
+            <option value="130601">13.6.1</option>
+            <option value="130600">13.6.0</option>
+        </select>
+        <br>
+        <button onclick="downloadFile()">提交</button>
+        <br>
+        <label id="seed"></label>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            if (localStorage.getItem("theme") === "dark") {
+                document.body.classList.add("dark-mode");
+            }
+        });
+
+        function toggleTheme() {
+            if (document.startViewTransition) {
+                const transition = document.startViewTransition(() => {
+                    // 延遲主題切換，直到遮罩動畫完成
+                    setTimeout(() => {
+                        document.body.classList.toggle("dark-mode");
+                        localStorage.setItem("theme", document.body.classList.contains("dark-mode") ? "dark" : "light");
+                    }, 1000); // 與 --switch-duration (1.75s) 同步
+                });
+            } else {
+                // 回退方案：直接切換主題
+                document.body.classList.toggle("dark-mode");
+                localStorage.setItem("theme", document.body.classList.contains("dark-mode") ? "dark" : "light");
+            }
+        }
+    </script>
+    <script src="javascripts/script.js"></script>
+    <script src="javascripts/seek.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</body>
+</html>

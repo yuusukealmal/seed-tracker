@@ -1,0 +1,147 @@
+/* 定義全局變量 */
+:root {
+  --switch-duration: 1.75s; /* 遮罩動畫持續時間 */
+  --transition-delay: 1.75s; /* 頁面過渡延遲，與遮罩動畫同步 */
+  --expo-in: cubic-bezier(0.7, 0, 0.84, 0); /* 緩動曲線 */
+}
+
+/* 設置頁面整體樣式 */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: white;
+  color: black;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: background-color 0.3s ease var(--transition-delay), 
+              color 0.3s ease var(--transition-delay), 
+              filter 0.3s ease var(--transition-delay);
+}
+
+/* 黑暗模式樣式 */
+.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+  filter: grayscale(0%);
+}
+
+/* 控制區域樣式 */
+.controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 輸入框和按鈕通用樣式 */
+input, button {
+  margin: 5px;
+  padding: 8px;
+  font-size: 14px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+/* 按鈕專屬樣式 */
+button {
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* 輸入框焦點效果 */
+input:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* 主題切換按鈕樣式 */
+.theme-toggle {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  transition: transform 0.3s;
+}
+
+.theme-toggle:hover {
+  transform: scale(1.1);
+}
+
+/* View Transition 設置 */
+::view-transition-group(root) {
+  animation-timing-function: var(--expo-in);
+  z-index: 100;
+}
+
+/* 新頁面進入時的遮罩動畫 */
+::view-transition-new(root) {
+  -webkit-mask: url(../images/shigure-ui.webp) center / contain no-repeat;
+  mask: url(../images/shigure-ui.webp) center / contain no-repeat;
+  animation: shigure-mask-in var(--switch-duration) forwards;
+}
+
+/* 舊頁面退出時的遮罩動畫 */
+::view-transition-old(root) {
+  -webkit-mask: url(../images/shigure-ui.webp) center / contain no-repeat;
+  mask: url(../images/shigure-ui.webp) center / contain no-repeat;
+  animation: shigure-mask-out var(--switch-duration) forwards;
+}
+
+/* 遮罩進入動畫 */
+@keyframes shigure-mask-in {
+  0% {
+      -webkit-mask-size: 0;
+      mask-size: 0;
+  }
+  25% {
+      -webkit-mask-size: 50vmax;
+      mask-size: 50vmax;
+  }
+  75% {
+      -webkit-mask-size: 50vmax;
+      mask-size: 50vmax;
+  }
+  100% {
+      -webkit-mask-size: 0;
+      mask-size: 0;
+  }
+}
+
+/* 遮罩退出動畫 */
+@keyframes shigure-mask-out {
+  0% {
+      -webkit-mask-size: 0;
+      mask-size: 0;
+  }
+  25% {
+      -webkit-mask-size: 50vmax;
+      mask-size: 50vmax;
+  }
+  75% {
+      -webkit-mask-size: 50vmax;
+      mask-size: 50vmax;
+  }
+  100% {
+      -webkit-mask-size: 0;
+      mask-size: 0;
+  }
+}
+
+/* 響應式設計 */
+@media (max-width: 600px) {
+  .controls {
+      width: 90%;
+  }
+  input, button {
+      width: 100%;
+  }
+}
