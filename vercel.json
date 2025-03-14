@@ -8,28 +8,12 @@
         {
             "src": "public/**",
             "use": "@vercel/static"
-        },
-        {
-            "src": "index.html",
-            "use": "@vercel/static"
         }
     ],
     "routes": [
         {
-            "src": "/health",
-            "dest": "/app.js"
-        },
-        {
-            "src": "/download",
-            "dest": "/app.js"
-        },
-        {
-            "src": "/public/(.*)",
-            "dest": "/public/$1"
-        },
-        {
-            "src": "/",
-            "dest": "/index.html"
+            "src": "/(.*)",
+            "dest": "app.js"
         }
     ]
 }
