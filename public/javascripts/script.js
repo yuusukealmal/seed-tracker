@@ -1,132 +1,125 @@
-(function (_0x12f6eb, _0x57425e) {
-  const _0x1ace86 = _0x50ad,
-    _0x136e68 = _0x12f6eb();
+(function (_0x14ed97, _0xca42e5) {
+  const _0x1379af = _0x4050,
+    _0x1f7d15 = _0x14ed97();
   while (!![]) {
     try {
-      const _0x3ae757 =
-        (-parseInt(_0x1ace86(0x8c)) / 0x1) *
-          (-parseInt(_0x1ace86(0xa3)) / 0x2) +
-        -parseInt(_0x1ace86(0x96)) / 0x3 +
-        -parseInt(_0x1ace86(0x98)) / 0x4 +
-        parseInt(_0x1ace86(0xa0)) / 0x5 +
-        (parseInt(_0x1ace86(0x89)) / 0x6) * (parseInt(_0x1ace86(0x99)) / 0x7) +
-        -parseInt(_0x1ace86(0xa4)) / 0x8 +
-        parseInt(_0x1ace86(0x84)) / 0x9;
-      if (_0x3ae757 === _0x57425e) break;
-      else _0x136e68["push"](_0x136e68["shift"]());
-    } catch (_0x1d74ac) {
-      _0x136e68["push"](_0x136e68["shift"]());
+      const _0x49518f =
+        (parseInt(_0x1379af(0x162)) / 0x1) *
+          (-parseInt(_0x1379af(0x178)) / 0x2) +
+        -parseInt(_0x1379af(0x164)) / 0x3 +
+        (parseInt(_0x1379af(0x165)) / 0x4) *
+          (parseInt(_0x1379af(0x177)) / 0x5) +
+        (-parseInt(_0x1379af(0x163)) / 0x6) *
+          (parseInt(_0x1379af(0x175)) / 0x7) +
+        -parseInt(_0x1379af(0x16f)) / 0x8 +
+        parseInt(_0x1379af(0x17b)) / 0x9 +
+        (parseInt(_0x1379af(0x172)) / 0xa) * (parseInt(_0x1379af(0x173)) / 0xb);
+      if (_0x49518f === _0xca42e5) break;
+      else _0x1f7d15["push"](_0x1f7d15["shift"]());
+    } catch (_0x1b0ce3) {
+      _0x1f7d15["push"](_0x1f7d15["shift"]());
     }
   }
-})(_0x119e, 0x25884);
+})(_0x59a1, 0x7499b);
 async function downloadFile() {
-  const _0x844166 = _0x50ad,
-    _0x2d0221 = document[_0x844166(0x9a)](_0x844166(0x90))[_0x844166(0x83)],
-    _0x222b5a = document[_0x844166(0x9a)]("password")["value"],
-    _0x3e9dcc = document[_0x844166(0x8f)](_0x844166(0x9c)),
-    _0x3bd5e0 = document["getElementById"]("gv")[_0x844166(0x83)];
-  let _0x597e43 = null;
-  const _0x15a954 = /^[A-Za-z0-9]{9}$/,
-    _0x30e7f4 = /^\d{4}$/;
-  if (!_0x2d0221) alert(_0x844166(0x9d));
-  else {
-    if (!_0x222b5a) alert(_0x844166(0x93));
-    else {
-      if (!_0x3e9dcc) alert(_0x844166(0x92));
-      else {
-        if (!_0x3bd5e0) alert(_0x844166(0x95));
-        else {
-          if (!_0x15a954[_0x844166(0x86)](_0x2d0221)) alert("轉移碼格式錯誤！");
-          else
-            !_0x30e7f4[_0x844166(0x86)](_0x222b5a)
-              ? alert("驗證碼格式錯誤！")
-              : ((_0x597e43 = _0x3e9dcc["value"]),
-                console[_0x844166(0x8a)](_0x844166(0x97), {
-                  account: _0x2d0221,
-                  password: _0x222b5a,
-                  cc: _0x597e43,
-                  gv: _0x3bd5e0,
-                }));
-        }
-      }
-    }
-  }
-  const _0x1e162b = await axios[_0x844166(0x94)](
-      _0x844166(0x91),
-      { account: _0x2d0221, password: _0x222b5a, cc: _0x597e43, gv: _0x3bd5e0 },
-      { responseType: _0x844166(0x8e) }
+  const _0x473a22 = _0x4050,
+    _0x121d6b = document[_0x473a22(0x166)](_0x473a22(0x169))["value"],
+    _0x4e9636 = document["getElementById"](_0x473a22(0x167))[_0x473a22(0x161)],
+    _0x5534cd = document["querySelector"]("input[name=\x22cc\x22]:checked"),
+    _0x52728c = document[_0x473a22(0x166)]("gv")["value"];
+  let _0xaf4c56 = null;
+  const _0xf8d442 = /^[A-Za-z0-9]{9}$/,
+    _0x3b1078 = /^\d{4}$/;
+  if (!_0x121d6b || !_0x4e9636 || !_0x5534cd || !_0x52728c)
+    alert(
+      !_0x121d6b
+        ? "請輸入轉移碼"
+        : !_0x4e9636
+        ? "請輸入驗證碼"
+        : !_0x5534cd
+        ? "請選擇版本"
+        : _0x473a22(0x17d)
+    );
+  else
+    !_0xf8d442[_0x473a22(0x17f)](_0x121d6b) ||
+    !_0x3b1078[_0x473a22(0x17f)](_0x4e9636)
+      ? alert(
+          !_0xf8d442["test"](_0x121d6b) ? _0x473a22(0x176) : _0x473a22(0x168)
+        )
+      : console[_0x473a22(0x17a)](_0x473a22(0x17c), {
+          account: _0x121d6b,
+          password: _0x4e9636,
+          cc: _0x5534cd[_0x473a22(0x161)],
+          gv: _0x52728c,
+        });
+  const _0x36e1ce = await axios[_0x473a22(0x179)](
+      _0x473a22(0x171),
+      { account: _0x121d6b, password: _0x4e9636, cc: _0xaf4c56, gv: _0x52728c },
+      { responseType: "arraybuffer" }
     ),
-    _0x1ee90b = new Uint8Array(_0x1e162b[_0x844166(0x9b)]);
+    _0x32e408 = new Uint8Array(_0x36e1ce["data"]);
   try {
-    const _0x59f54a = parseSave(_0x1ee90b, _0x597e43);
-    _0x59f54a === undefined
-      ? (document[_0x844166(0x9a)](_0x844166(0x9f))[_0x844166(0x85)] =
-          _0x844166(0xa2))
-      : ((document[_0x844166(0x9a)](_0x844166(0x9f))["textContent"] =
-          _0x844166(0xa6) + _0x59f54a),
-        console[_0x844166(0x8a)](
-          _0x844166(0x8d) + _0x59f54a + _0x844166(0x87) + _0x597e43
-        ),
-        (window["location"][_0x844166(0x88)] =
-          _0x844166(0x8d) + _0x59f54a + _0x844166(0x87) + _0x597e43));
-  } catch (_0x4c9d89) {
-    console[_0x844166(0xa1)](_0x844166(0xa5), _0x4c9d89),
-      (document[_0x844166(0x9a)](_0x844166(0x9f))[_0x844166(0x85)] =
-        _0x844166(0x8b) + _0x4c9d89[_0x844166(0x9e)]);
+    const _0x3b6bfb = parseSave(_0x32e408, _0xaf4c56);
+    _0x3b6bfb === undefined
+      ? (document[_0x473a22(0x166)](_0x473a22(0x16b))[_0x473a22(0x17e)] =
+          _0x473a22(0x16c))
+      : ((document[_0x473a22(0x166)](_0x473a22(0x16b))[_0x473a22(0x17e)] =
+          _0x473a22(0x16a) + _0x3b6bfb),
+        (window["location"][_0x473a22(0x170)] =
+          "https://bc.godfat.org/?seed=" + _0x3b6bfb + "&lang=" + _0xaf4c56));
+  } catch (_0x26ad04) {
+    console[_0x473a22(0x16e)](_0x473a22(0x174), _0x26ad04),
+      (document[_0x473a22(0x166)](_0x473a22(0x16b))[_0x473a22(0x17e)] =
+        "Failed\x20to\x20Parse:\x20" + _0x26ad04[_0x473a22(0x16d)]);
   }
 }
-function _0x50ad(_0x2d7a49, _0x5ebe4c) {
-  const _0x119e8e = _0x119e();
+function _0x4050(_0x5ecc85, _0x27cebf) {
+  const _0x59a187 = _0x59a1();
   return (
-    (_0x50ad = function (_0x50add2, _0x3157ff) {
-      _0x50add2 = _0x50add2 - 0x83;
-      let _0x249910 = _0x119e8e[_0x50add2];
-      return _0x249910;
+    (_0x4050 = function (_0x405018, _0x32221a) {
+      _0x405018 = _0x405018 - 0x161;
+      let _0x1d800c = _0x59a187[_0x405018];
+      return _0x1d800c;
     }),
-    _0x50ad(_0x2d7a49, _0x5ebe4c)
+    _0x4050(_0x5ecc85, _0x27cebf)
   );
 }
-function _0x119e() {
-  const _0x3c2f72 = [
-    "post",
-    "請選擇遊戲版本",
-    "341550FfJLhc",
+function _0x59a1() {
+  const _0x11139f = [
     "Send\x20Query:",
-    "1071440AqfbVS",
-    "7blsZdW",
-    "getElementById",
-    "data",
-    "input[name=\x22cc\x22]:checked",
-    "請輸入轉移碼",
-    "message",
-    "seed",
-    "477885DTEiei",
-    "error",
-    "Failed\x20to\x20Parse.\x20Please\x20Check\x20All\x20Fields",
-    "1808lESqBb",
-    "954576BfPXmY",
-    "parseSave\x20error:",
-    "Seed:\x20",
-    "value",
-    "2195190bwgPQN",
+    "請選擇遊戲版本",
     "textContent",
     "test",
-    "&lang=",
-    "href",
-    "1750638PSXjMB",
-    "log",
-    "Failed\x20to\x20Parse:\x20",
-    "26uqMMsH",
-    "https://bc.godfat.org/?seed=",
-    "arraybuffer",
-    "querySelector",
+    "value",
+    "211687EVMJet",
+    "1447326rpWtZR",
+    "730398IvARSw",
+    "4OyhLDg",
+    "getElementById",
+    "password",
+    "驗證碼格式錯誤！",
     "account",
-    "http://localhost:3001/download",
-    "請選擇版本",
-    "請輸入驗證碼",
+    "Seed:\x20",
+    "seed",
+    "Failed\x20to\x20Parse.\x20Please\x20Check\x20All\x20Fields",
+    "message",
+    "error",
+    "4915032fUaKrB",
+    "href",
+    "https://seedtracker.vercel.app//download",
+    "75910KLBrcn",
+    "649KGbzSs",
+    "parseSave\x20error:",
+    "21KtTIyh",
+    "轉移碼格式錯誤！",
+    "4442590MSqkDY",
+    "2cYsFZi",
+    "post",
+    "log",
+    "8409627MajstR",
   ];
-  _0x119e = function () {
-    return _0x3c2f72;
+  _0x59a1 = function () {
+    return _0x11139f;
   };
-  return _0x119e();
+  return _0x59a1();
 }
