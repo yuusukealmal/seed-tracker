@@ -2,21 +2,33 @@
     "version": 2,
     "builds": [
         {
-            "src": "index.html",
-            "use": "@vercel/static"
+            "src": "app.js",
+            "use": "@vercel/node"
         },
         {
             "src": "public/**",
+            "use": "@vercel/static"
+        },
+        {
+            "src": "index.html",
             "use": "@vercel/static"
         }
     ],
     "routes": [
         {
+            "src": "/health",
+            "dest": "/app.js"
+        },
+        {
+            "src": "/download",
+            "dest": "/app.js"
+        },
+        {
             "src": "/public/(.*)",
             "dest": "/public/$1"
         },
         {
-            "src": "/(.*)",
+            "src": "/",
             "dest": "/index.html"
         }
     ]

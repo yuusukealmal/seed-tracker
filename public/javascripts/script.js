@@ -1,125 +1,134 @@
-(function (_0x14ed97, _0xca42e5) {
-  const _0x1379af = _0x4050,
-    _0x1f7d15 = _0x14ed97();
-  while (!![]) {
-    try {
-      const _0x49518f =
-        (parseInt(_0x1379af(0x162)) / 0x1) *
-          (-parseInt(_0x1379af(0x178)) / 0x2) +
-        -parseInt(_0x1379af(0x164)) / 0x3 +
-        (parseInt(_0x1379af(0x165)) / 0x4) *
-          (parseInt(_0x1379af(0x177)) / 0x5) +
-        (-parseInt(_0x1379af(0x163)) / 0x6) *
-          (parseInt(_0x1379af(0x175)) / 0x7) +
-        -parseInt(_0x1379af(0x16f)) / 0x8 +
-        parseInt(_0x1379af(0x17b)) / 0x9 +
-        (parseInt(_0x1379af(0x172)) / 0xa) * (parseInt(_0x1379af(0x173)) / 0xb);
-      if (_0x49518f === _0xca42e5) break;
-      else _0x1f7d15["push"](_0x1f7d15["shift"]());
-    } catch (_0x1b0ce3) {
-      _0x1f7d15["push"](_0x1f7d15["shift"]());
-    }
-  }
-})(_0x59a1, 0x7499b);
-async function downloadFile() {
-  const _0x473a22 = _0x4050,
-    _0x121d6b = document[_0x473a22(0x166)](_0x473a22(0x169))["value"],
-    _0x4e9636 = document["getElementById"](_0x473a22(0x167))[_0x473a22(0x161)],
-    _0x5534cd = document["querySelector"]("input[name=\x22cc\x22]:checked"),
-    _0x52728c = document[_0x473a22(0x166)]("gv")["value"];
-  let _0xaf4c56 = null;
-  const _0xf8d442 = /^[A-Za-z0-9]{9}$/,
-    _0x3b1078 = /^\d{4}$/;
-  if (!_0x121d6b || !_0x4e9636 || !_0x5534cd || !_0x52728c)
-    alert(
-      !_0x121d6b
-        ? "請輸入轉移碼"
-        : !_0x4e9636
-        ? "請輸入驗證碼"
-        : !_0x5534cd
-        ? "請選擇版本"
-        : _0x473a22(0x17d)
-    );
-  else
-    !_0xf8d442[_0x473a22(0x17f)](_0x121d6b) ||
-    !_0x3b1078[_0x473a22(0x17f)](_0x4e9636)
-      ? alert(
-          !_0xf8d442["test"](_0x121d6b) ? _0x473a22(0x176) : _0x473a22(0x168)
-        )
-      : console[_0x473a22(0x17a)](_0x473a22(0x17c), {
-          account: _0x121d6b,
-          password: _0x4e9636,
-          cc: _0x5534cd[_0x473a22(0x161)],
-          gv: _0x52728c,
-        });
-  const _0x36e1ce = await axios[_0x473a22(0x179)](
-      _0x473a22(0x171),
-      { account: _0x121d6b, password: _0x4e9636, cc: _0xaf4c56, gv: _0x52728c },
-      { responseType: "arraybuffer" }
-    ),
-    _0x32e408 = new Uint8Array(_0x36e1ce["data"]);
-  try {
-    const _0x3b6bfb = parseSave(_0x32e408, _0xaf4c56);
-    _0x3b6bfb === undefined
-      ? (document[_0x473a22(0x166)](_0x473a22(0x16b))[_0x473a22(0x17e)] =
-          _0x473a22(0x16c))
-      : ((document[_0x473a22(0x166)](_0x473a22(0x16b))[_0x473a22(0x17e)] =
-          _0x473a22(0x16a) + _0x3b6bfb),
-        (window["location"][_0x473a22(0x170)] =
-          "https://bc.godfat.org/?seed=" + _0x3b6bfb + "&lang=" + _0xaf4c56));
-  } catch (_0x26ad04) {
-    console[_0x473a22(0x16e)](_0x473a22(0x174), _0x26ad04),
-      (document[_0x473a22(0x166)](_0x473a22(0x16b))[_0x473a22(0x17e)] =
-        "Failed\x20to\x20Parse:\x20" + _0x26ad04[_0x473a22(0x16d)]);
-  }
-}
-function _0x4050(_0x5ecc85, _0x27cebf) {
-  const _0x59a187 = _0x59a1();
+function _0x2dbe(_0x2cfd89, _0x36ac1a) {
+  const _0x35fd86 = _0x35fd();
   return (
-    (_0x4050 = function (_0x405018, _0x32221a) {
-      _0x405018 = _0x405018 - 0x161;
-      let _0x1d800c = _0x59a187[_0x405018];
-      return _0x1d800c;
+    (_0x2dbe = function (_0x2dbe51, _0x5f2186) {
+      _0x2dbe51 = _0x2dbe51 - 0x1bd;
+      let _0x4ef444 = _0x35fd86[_0x2dbe51];
+      return _0x4ef444;
     }),
-    _0x4050(_0x5ecc85, _0x27cebf)
+    _0x2dbe(_0x2cfd89, _0x36ac1a)
   );
 }
-function _0x59a1() {
-  const _0x11139f = [
-    "Send\x20Query:",
-    "請選擇遊戲版本",
-    "textContent",
+function _0x35fd() {
+  const _0x57bd4a = [
     "test",
-    "value",
-    "211687EVMJet",
-    "1447326rpWtZR",
-    "730398IvARSw",
-    "4OyhLDg",
-    "getElementById",
-    "password",
+    "324334MEBUWt",
     "驗證碼格式錯誤！",
-    "account",
-    "Seed:\x20",
-    "seed",
-    "Failed\x20to\x20Parse.\x20Please\x20Check\x20All\x20Fields",
-    "message",
+    "data",
+    "&lang=",
+    "1074310xIQosW",
+    "2726397sHhnbf",
+    "686008BPvNmC",
     "error",
-    "4915032fUaKrB",
-    "href",
-    "https://seedtracker.vercel.app//download",
-    "75910KLBrcn",
-    "649KGbzSs",
-    "parseSave\x20error:",
-    "21KtTIyh",
-    "轉移碼格式錯誤！",
-    "4442590MSqkDY",
-    "2cYsFZi",
-    "post",
+    "textContent",
+    "arraybuffer",
+    "請輸入轉移碼",
+    "http://localhost:3000/download",
+    "input[name=\x22cc\x22]:checked",
+    "https://bc.godfat.org/?seed=",
+    "message",
+    "Failed\x20to\x20Parse:\x20",
+    "請選擇遊戲版本",
     "log",
-    "8409627MajstR",
+    "value",
+    "7jNWphC",
+    "getElementById",
+    "4313744TRsYrC",
+    "location",
+    "1847874VqyZEV",
+    "15Ncoqxw",
+    "2211377HTpVej",
+    "seed",
+    "6MBrexJ",
+    "Failed\x20to\x20Parse.\x20Please\x20Check\x20All\x20Fields",
+    "Seed:\x20",
   ];
-  _0x59a1 = function () {
-    return _0x11139f;
+  _0x35fd = function () {
+    return _0x57bd4a;
   };
-  return _0x59a1();
+  return _0x35fd();
+}
+(function (_0x165f91, _0x24bc0d) {
+  const _0x47cc74 = _0x2dbe,
+    _0x14cb82 = _0x165f91();
+  while (!![]) {
+    try {
+      const _0x385f06 =
+        (parseInt(_0x47cc74(0x1d8)) / 0x1) *
+          (parseInt(_0x47cc74(0x1c5)) / 0x2) +
+        (parseInt(_0x47cc74(0x1c1)) / 0x3) *
+          (parseInt(_0x47cc74(0x1cb)) / 0x4) +
+        (parseInt(_0x47cc74(0x1be)) / 0x5) *
+          (-parseInt(_0x47cc74(0x1bd)) / 0x6) +
+        parseInt(_0x47cc74(0x1bf)) / 0x7 +
+        -parseInt(_0x47cc74(0x1da)) / 0x8 +
+        parseInt(_0x47cc74(0x1ca)) / 0x9 +
+        parseInt(_0x47cc74(0x1c9)) / 0xa;
+      if (_0x385f06 === _0x24bc0d) break;
+      else _0x14cb82["push"](_0x14cb82["shift"]());
+    } catch (_0x5ac13e) {
+      _0x14cb82["push"](_0x14cb82["shift"]());
+    }
+  }
+})(_0x35fd, 0xb4fad);
+async function downloadFile() {
+  const _0x491a67 = _0x2dbe,
+    _0x2bbe0a = document["getElementById"]("account")[_0x491a67(0x1d7)],
+    _0x2a1295 = document[_0x491a67(0x1d9)]("password")[_0x491a67(0x1d7)],
+    _0x1439e7 = document["querySelector"](_0x491a67(0x1d1)),
+    _0x4b874c = document[_0x491a67(0x1d9)]("gv")[_0x491a67(0x1d7)],
+    _0x5501a0 = /^[A-Za-z0-9]{9}$/,
+    _0x51d419 = /^\d{4}$/;
+  if (!_0x2bbe0a || !_0x2a1295 || !_0x1439e7 || !_0x4b874c)
+    alert(
+      !_0x2bbe0a
+        ? _0x491a67(0x1cf)
+        : !_0x2a1295
+        ? "請輸入驗證碼"
+        : !_0x1439e7
+        ? "請選擇版本"
+        : _0x491a67(0x1d5)
+    );
+  else
+    !_0x5501a0["test"](_0x2bbe0a) || !_0x51d419[_0x491a67(0x1c4)](_0x2a1295)
+      ? alert(
+          !_0x5501a0[_0x491a67(0x1c4)](_0x2bbe0a)
+            ? "轉移碼格式錯誤！"
+            : _0x491a67(0x1c6)
+        )
+      : console[_0x491a67(0x1d6)]("Send\x20Query:", {
+          account: _0x2bbe0a,
+          password: _0x2a1295,
+          cc: _0x1439e7[_0x491a67(0x1d7)],
+          gv: _0x4b874c,
+        });
+  const _0xf56a59 = await axios["post"](
+      _0x491a67(0x1d0),
+      {
+        account: _0x2bbe0a,
+        password: _0x2a1295,
+        cc: _0x1439e7[_0x491a67(0x1d7)],
+        gv: _0x4b874c,
+      },
+      { responseType: _0x491a67(0x1ce) }
+    ),
+    _0x414221 = new Uint8Array(_0xf56a59[_0x491a67(0x1c7)]);
+  try {
+    const _0x1400c4 = parseSave(_0x414221, _0x1439e7["value"]);
+    console[_0x491a67(0x1d6)]("rareGachaSeed:", _0x1400c4),
+      _0x1400c4 === undefined
+        ? (document[_0x491a67(0x1d9)](_0x491a67(0x1c0))[_0x491a67(0x1cd)] =
+            _0x491a67(0x1c2))
+        : ((document[_0x491a67(0x1d9)](_0x491a67(0x1c0))[_0x491a67(0x1cd)] =
+            _0x491a67(0x1c3) + _0x1400c4),
+          (window[_0x491a67(0x1db)]["href"] =
+            _0x491a67(0x1d2) +
+            _0x1400c4 +
+            _0x491a67(0x1c8) +
+            _0x1439e7[_0x491a67(0x1d7)]));
+  } catch (_0x3f92b6) {
+    console[_0x491a67(0x1cc)]("parseSave\x20error:", _0x3f92b6),
+      (document[_0x491a67(0x1d9)]("seed")[_0x491a67(0x1cd)] =
+        _0x491a67(0x1d4) + _0x3f92b6[_0x491a67(0x1d3)]);
+  }
 }
