@@ -1,16 +1,14 @@
 {
   "name": "seed-tracker",
   "version": "0.0.0",
-  "private": true,
+  "main": "index.js",
   "scripts": {
-    "start": "node ./bin/www"
+    "serve": "node index.js",
+    "build": "node index.js",
+    "dev": "LOG_LEVEL=debug node index.js | ./node_modules/.bin/pino-pretty",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "cookie-parser": "~1.4.4",
-    "debug": "~2.6.9",
-    "http-errors": "~1.6.3",
-    "jade": "~1.11.0",
-    "morgan": "~1.9.1",
     "axios": "^1.8.3",
     "cors": "^2.8.5",
     "express": "^4.21.2"
