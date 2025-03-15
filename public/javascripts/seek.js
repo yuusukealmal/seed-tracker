@@ -52,7 +52,7 @@ function getTimeStamp(_0x51a956) {
 }
 function _0x3043() {
   const _0x11577e = [
-    "Could\x20not\x20find\x20date",
+    "Error\x20Occurred\x20While\x20Parse",
     "15111976wWnJQC",
     "66xAajkk",
     "220392UjXBVC",
