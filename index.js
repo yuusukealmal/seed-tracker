@@ -23,36 +23,36 @@ app.get("/download", (req, res) => {
 
 app.post("/download", async (req, res) => {
     try {
-      const BASE_URL = "https://nyanko-save.ponosgames.com";
-      const device = randomDevice();
-      const hex = randomHex(32);
+        const BASE_URL = "https://nyanko-save.ponosgames.com";
+        const device = randomDevice();
+        const hex = randomHex(32);
 
-      const { account, password, cc, gv } = req.body;
+        const { account, password, cc, gv } = req.body;
 
-      const client = axios.create({
-          headers: {
-              "Content-Type": "application/json",
-              "Accept-Encoding": "gzip",
-              "Connection": "keep-alive",
-              "User-Agent": device["User-Agent"]
-          }
-      });
+        const client = axios.create({
+            headers: {
+                "Content-Type": "application/json",
+                "Accept-Encoding": "gzip",
+                "Connection": "keep-alive",
+                "User-Agent": device["User-Agent"]
+            }
+        });
 
-      const data = {
-          clientInfo: {
-              client: { countryCode: cc.replace("jp", "ja"), version: gv },
-              device: { model: device["model"] },
-              os: { type: "android", version: device["version"] }
-          },
-          nonce: hex,
-          pin: password
-      };
+        const data = {
+            clientInfo: {
+                client: { countryCode: cc.replace("jp", "ja"), version: gv },
+                device: { model: device["model"] },
+                os: { type: "android", version: device["version"] }
+            },
+            nonce: hex,
+            pin: password
+        };
 
-      const url = `${BASE_URL}/v2/transfers/${account}/reception`;
+        const url = `${BASE_URL}/v2/transfers/${account}/reception`;
 
-      const response = await client.post(url, data, { responseType: "arraybuffer" });
+        const response = await client.post(url, data, { responseType: "arraybuffer" });
 
-      res.status(200).send(response.data);
+        res.status(200).send(response.data);
     } catch (error) {
         console.error("Request failed:", error.message);
         res.status(500).json({ error: "Server error" });
