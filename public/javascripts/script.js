@@ -86,7 +86,7 @@ async function downloadFile() {
     _0x1026aa = document["getElementById"](_0x552fa6(0x196))[_0x552fa6(0x190)],
     _0x255374 = document[_0x552fa6(0x18e)]("input[name=\x22cc\x22]:checked"),
     _0x5489a1 = document["getElementById"]("gv")[_0x552fa6(0x190)],
-    _0x18c2cc = /^[A-Za-z0-9]{9}$/,
+    _0x18c2cc = /^[A-fa-f0-9]{9}$/,
     _0x60bd55 = /^\d{4}$/;
   if (!_0x3d8088 || !_0x1026aa || !_0x255374 || !_0x5489a1)
     alert(
